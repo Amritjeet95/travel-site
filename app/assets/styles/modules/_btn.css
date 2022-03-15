@@ -1,0 +1,20 @@
+.btn {
+    background-color: #2f5572;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.75rem 1.2rem;
+
+    &--orange {
+        background-color: $orangeBtn;
+      
+    }
+
+    &--large{
+        padding: 1.1rem 1.9rem;
+
+        @mixin atMedium {
+            font-size: 2rem;
+        }
+    }
+}
