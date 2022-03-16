@@ -4,9 +4,40 @@
     @mixin atMedium {
         padding: 4.5rem 0;
     }
+
     &--blue {
         background-color: $mainBlue;
         color: #FFF;
+    }
+
+    &--no-b-padding-until-medium {
+        padding-bottom: 0;
+
+        @mixin atMedium {
+            padding-bottom: 4.5rem;
+        }
+    }
+
+    &--no-b-padding-until-large {
+        padding-bottom: 0;
+
+        @mixin atLarge {
+            padding-bottom: 4.5rem;
+        }
+    }
+
+
+    &--testimonials {
+        background-color: #e0e6ef; /* When image is not available */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        
+        @mixin atLarge {
+            background-image: url("assets/images/testimonials-bg.jpg");
+            background-color: #cccccc; /* When image is not available */
+            
+        }
     }
     
 }

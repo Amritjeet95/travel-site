@@ -11,6 +11,7 @@ const postCSSPlugins = [
 module.exports = {
     entry: './app/assets/scripts/App.js',
    
+    
     devServer: {
         watchFiles: ['./app/**/*.html'],
         static: {
@@ -32,7 +33,7 @@ module.exports = {
         rules: [
              {
                 test: /\.css$/i,
-                use: ['style-loader','css-loader?url=false', {loader: 'postcss-loader', options: {postcssOptions: {plugins: postCSSPlugins}}}]
+                use: ["style-loader", "css-loader?url=false", {loader: "postcss-loader", options: {postcssOptions: {plugins: postCSSPlugins}}}]
              }
         ]
     }
